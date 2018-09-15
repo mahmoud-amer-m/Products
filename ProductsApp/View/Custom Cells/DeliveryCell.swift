@@ -24,6 +24,10 @@ class DeliveryCell: UITableViewCell {
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor.black.cgColor
         
+        setupView()
+    }
+    
+    func setupView() {
         deliveryImageView.backgroundColor = .clear
         deliveryImageView.image = UIImage(named: "productIcon")
         descriptionLabel.textColor = .black
@@ -53,7 +57,6 @@ class DeliveryCell: UITableViewCell {
         contentView.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .bottom, relatedBy: .equal, toItem: contentView, attribute: .bottom, multiplier: 1, constant: -8))
         //Top
         contentView.addConstraint(NSLayoutConstraint(item: descriptionLabel, attribute: .top, relatedBy: .equal, toItem: contentView, attribute: .top, multiplier: 1, constant: 8))
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

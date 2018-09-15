@@ -39,7 +39,6 @@ class CacheHelper {
         try? str?.write(to: file, atomically: false, encoding: .utf8)
     }
     
-    
     internal static func createCacheDirectory(dir: URL) {
         do {
             try FileManager.default.createDirectory(atPath: dir.path,  withIntermediateDirectories: true, attributes: nil)

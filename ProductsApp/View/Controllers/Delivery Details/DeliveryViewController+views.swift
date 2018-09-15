@@ -12,7 +12,7 @@ import CoreLocation
 import UIKit
 
 extension DeliveryViewController {
-    func drawScreen() {
+    func setupView() {
         self.title = "Delivery Details"
         
         detailsContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +20,7 @@ extension DeliveryViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        detailsContainerView.backgroundColor = .red
+        detailsContainerView.backgroundColor = .clear
         view.addSubview(detailsContainerView)
         view.addSubview(mapView)
         
@@ -39,6 +39,7 @@ extension DeliveryViewController {
         let region = MKCoordinateRegionMake(location, span)
         mapView.setRegion(region, animated: true)
         
+        //Bellow Info View
         //Top
         view.addConstraint(NSLayoutConstraint(item: detailsContainerView, attribute: .top, relatedBy: .equal, toItem: mapView, attribute: .bottom, multiplier: 1, constant: 8))
         //leading

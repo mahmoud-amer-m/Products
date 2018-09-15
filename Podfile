@@ -8,4 +8,5 @@ target 'ProductsApp' do
   # Pods for ProductsApp
 	pod 'Alamofire', '~> 4.4'
     pod 'SDWebImage', '~> 4.0'
+    pod 'ReachabilitySwift'
 end

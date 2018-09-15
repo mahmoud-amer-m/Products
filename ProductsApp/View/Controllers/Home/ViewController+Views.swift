@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension ViewController {
-    func drawScreen() {
+    func setupView() {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
