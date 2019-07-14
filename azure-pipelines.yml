@@ -19,8 +19,7 @@ steps:
   inputs:
     provProfileSecureFile: 'amer.developerprofile'
     provisioningProfileLocation: 'secureFiles'
-    provisioningProfilePassword: 111111
-    #removeProfile: false
+    removeProfile: false
 
 - script: /usr/local/bin/pod deintegrate
   displayName: 'Cleaning CocoaPods'
