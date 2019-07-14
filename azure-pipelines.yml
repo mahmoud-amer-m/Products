@@ -19,6 +19,7 @@ steps:
   inputs:
     provProfileSecureFile: 'amer.mobileprovision'
     provisioningProfileLocation: 'secureFiles'
+    provisioningProfilePassword: $(111111)
     #removeProfile: false
 
 - script: /usr/local/bin/pod deintegrate
