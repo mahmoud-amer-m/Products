@@ -12,8 +12,8 @@ pool:
 steps:
 - task: InstallAppleCertificate@2
   inputs:
-    certSecureFile: 'amer.p12'
-    certPwd: 111111
+    certSecureFile: 'amerq.p12'
+    certPwd: 12345678
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
