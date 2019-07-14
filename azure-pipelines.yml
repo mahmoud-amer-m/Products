@@ -17,7 +17,7 @@ steps:
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
-    provProfileSecureFile: 'amer.mobileprovision'
+    provProfileSecureFile: 'amer.developerprofile'
     provisioningProfileLocation: 'secureFiles'
     provisioningProfilePassword: $(111111)
     #removeProfile: false
