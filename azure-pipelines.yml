@@ -10,6 +10,17 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+- task: InstallAppleCertificate@2
+  inputs:
+    certSecureFile: 'amer.p12'
+    certPwd: $(111111)
+
+- task: InstallAppleProvisioningProfile@1
+  inputs:
+    provProfileSecureFile: 'amer.mobileprovision'
+    provisioningProfileLocation: 'secureFiles'
+    #removeProfile: false
+
 - script: /usr/local/bin/pod deintegrate
   displayName: 'Cleaning CocoaPods'
 - script: /usr/local/bin/pod install
