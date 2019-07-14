@@ -13,13 +13,13 @@ steps:
 - task: InstallAppleCertificate@2
   inputs:
     certSecureFile: 'amer.p12'
-    certPwd: $(111111)
+    certPwd: 111111
 
 - task: InstallAppleProvisioningProfile@1
   inputs:
     provProfileSecureFile: 'amer.developerprofile'
     provisioningProfileLocation: 'secureFiles'
-    provisioningProfilePassword: $(111111)
+    provisioningProfilePassword: 111111
     #removeProfile: false
 
 - script: /usr/local/bin/pod deintegrate
