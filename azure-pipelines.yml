@@ -20,7 +20,7 @@ steps:
 
 - task: Xcode@5
   inputs:
-    actions: 'build'
+    actions: 'clean build'
     scheme: 'ProductsApp'
     sdk: 'iphoneos'
     configuration: 'Release'
